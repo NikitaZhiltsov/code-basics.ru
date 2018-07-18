@@ -1,0 +1,25 @@
+<?php
+
+use function HexletBasics\Functions\parentFor;
+
+// BEGIN
+function getParentNamesTotalLength($child){
+    $mom = strlen(parentFor($child, 'mother')); 
+    $dad = strlen(parentFor($child, 'father')); 
+    $child = $mom + $dad;
+    return $child;
+}
+// END
+
+//АЛЬТЕРНАТИВНОЕ РЕШЕНИЕ / Alternative code
+
+<?php
+
+use function HexletBasics\Functions\parentFor;
+
+// BEGIN
+function getParentNamesTotalLength($child){
+     return strlen(parentFor($child, 'mother') . parentFor($child, 'father')); 
+         
+}
+// END
