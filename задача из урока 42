@@ -1,0 +1,8 @@
+<?php
+
+// BEGIN
+
+function getAgeDifference($age1, $age2) {
+   return "The age difference is " . abs($age1 - $age2);
+}
+// END
